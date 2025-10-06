@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Learning - Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="login-container">
+    <h1>Smart Learning & Productivity Platform</h1>
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="Enter your name" required>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const name = document.getElementById("username").value;
+      localStorage.setItem("username", name);
+      window.location.href = "home.html";
+    });
+  </script>
+</body>
+</html>

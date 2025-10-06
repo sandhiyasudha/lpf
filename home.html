@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Learning Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+  <header>
+    <h2>Welcome, <span id="studentName"></span> 👋</h2>
+  </header>
+
+  <main>
+    <!-- User Input Module -->
+    <section class="module">
+      <h3>📚 Add Your Subjects</h3>
+      <input type="text" id="subjectInput" placeholder="Enter subject name">
+      <input type="number" id="totalChapters" placeholder="Total chapters">
+      <button id="addSubject">Add Subject</button>
+      <div id="subjectList"></div>
+    </section>
+
+    <!-- Progress Tracker Module -->
+    <section class="module">
+      <h3>📈 Progress Tracker</h3>
+      <canvas id="progressChart"></canvas>
+    </section>
+
+    <!-- Recommendation Module -->
+    <section class="module">
+      <h3>💡 Recommendation</h3>
+      <p id="recommendationText">Add subjects to get recommendations!</p>
+    </section>
+
+    <!-- Motivation Module -->
+    <section class="module">
+      <h3>🌟 Daily Motivation</h3>
+      <p id="motivationText"></p>
+    </section>
+
+    <button id="logout">Logout</button>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
